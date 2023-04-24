@@ -5,9 +5,7 @@
 **
 */
 
-#define VRES     296    // active lines per field used for data recording
-						//underrun @ 296
-						//overrun @ 295
+#define VRES     294    //active lines per field used for data recording
 						//44100 samples/s
 						//88200 samples/s stereo
 						//1764 samples per field

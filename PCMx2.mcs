@@ -2,7 +2,7 @@
 MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
 Version=1.0
 [File000]
-Location=C:\Users\Albe\Desktop\PCMX3\02_04_2020_encoder\PAL_video.o
+Location=C:\Users\Albe\Desktop\PCMX3\03_04_2020_encoder\PAL_video.o
 Folder=Intermediary
 DeviceName=dsPIC33FJ256GP710
 LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
@@ -15,7 +15,7 @@ ToolArgsString=-g -Wall
 TraceCmdString=
 DebugOptions=
 [File001]
-Location=C:\Users\Albe\Desktop\PCMX3\02_04_2020_encoder\PCMx2.cof
+Location=C:\Users\Albe\Desktop\PCMX3\03_04_2020_encoder\PCMx2.cof
 Folder=Output
 DeviceName=dsPIC33FJ256GP710
 LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
@@ -28,7 +28,7 @@ ToolArgsString=-o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)" -Map="$(BINDIR_)$(TAR
 TraceCmdString=
 DebugOptions=
 [File002]
-Location=C:\Users\Albe\Desktop\PCMX3\02_04_2020_encoder\PCMx2.hex
+Location=C:\Users\Albe\Desktop\PCMX3\03_04_2020_encoder\PCMx2.hex
 Folder=Output
 DeviceName=dsPIC33FJ256GP710
 LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}

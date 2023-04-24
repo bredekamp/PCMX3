@@ -548,8 +548,8 @@ int main()
  
 
       // main loop -----------------------------------------    
-	//while((sample_count > 0) && (sample_count < FIFO_SIZE))
-	while(1)
+	while((sample_count > 0) || (sample_count < FIFO_SIZE))
+	//while(1)
 	{   
    		//continue for as long as there are samples to load
 

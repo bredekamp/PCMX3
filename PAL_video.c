@@ -296,8 +296,8 @@ void _ISRFAST _OC4Interrupt( void) // loads SPI FIFO with 1 x 16-bit word = 16 p
 {    
 //	_RA0 = 1;
 
-	if ((sample_count > (FIFO_SIZE/2)) || (inside_line_flag == 1)) //if the buffer has enough data OR you're allready building a line then go ahead
-	{//-------------------	
+	//if ((sample_count > (FIFO_SIZE/2)) || (inside_line_flag == 1)) //if the buffer has enough data OR you're allready building a line then go ahead
+	//-------------------	
 		//if there are not enough samples at the beginning of a line to start construction of a new line then creation of a
 		//new line should be locked out untill the next time you start a line
 
@@ -306,13 +306,13 @@ void _ISRFAST _OC4Interrupt( void) // loads SPI FIFO with 1 x 16-bit word = 16 p
 
 		switch ( SPI_slot_counter ) {
 		case 0:
-  				SPI1BUF = 0b1010101010101100;
-				inside_line_flag = 1;			//started building data line
+  				SPI1BUF = 0b1100110011001100;
+				//inside_line_flag = 1;			//started building data line
   		break;
 		case 7:
   				SPI1BUF = CHECKSUM;   			// Slot 7 is on far right of TV screen
 				CHECKSUM = 0;		  			//Checksum cleared for use in next line
-				inside_line_flag = 0;			//finished building data line
+			//	inside_line_flag = 0;			//finished building data line
   		break;
 		default:
  			//load sample into SPI buffer
@@ -335,7 +335,7 @@ void _ISRFAST _OC4Interrupt( void) // loads SPI FIFO with 1 x 16-bit word = 16 p
 		if (SPI_slot_counter == 8)
 			SPI_slot_counter=0;      	
 		
-	}//if------------------------
+	//if------------------------
 
 	// clear the interrupt flag
 	_OC4IF = 0;
@@ -548,8 +548,8 @@ int main()
  
 
       // main loop -----------------------------------------    
-	while((sample_count > 0) && (sample_count < FIFO_SIZE))
-	//while(1)
+	//while((sample_count > 0) && (sample_count < FIFO_SIZE))
+	while(1)
 	{   
    		//continue for as long as there are samples to load
 
